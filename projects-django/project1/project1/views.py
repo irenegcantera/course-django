@@ -2,13 +2,24 @@ from django.http import HttpResponse
 import datetime
 from django.template import Template, Context
 
+class Persona(object):
+    def __init__(self, nombre, apellido):
+        self.nombre=nombre
+        self.apellido=apellido
+
 def saludo(request): # primera vista, devuelve una respuesta
+
+    p1=Persona("Prueba","Con Clases")
+    
+    #nombre="Irene"
+    #apellido="González"
+    fecha=datetime.datetime.now()
     
     doc_externo=open("C:/Users/irene/Documents/GitHub Projects/projects-django/project1/project1/template/miPlantilla.html")
 
     plt=Template(doc_externo.read())
     doc_externo.close() # redendizar
-    ctx=Context() # contexto
+    ctx=Context({'nombre': p1.nombre, 'apellido' : p1.apellido, 'fecha_actual' : fecha}) # contexto que puede recibir diccionarios
     documento=plt.render(ctx)
 
     return HttpResponse(documento)
