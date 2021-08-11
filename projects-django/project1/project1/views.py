@@ -14,13 +14,15 @@ def saludo(request): # primera vista, devuelve una respuesta
     #nombre="Irene"
     #apellido="González"
     fecha=datetime.datetime.now()
+
+    lista_temas=['Plantillas','Modelos','Formularios','Vistas','Despliegue']
     
     doc_externo=open("C:/Users/irene/Documents/GitHub Projects/projects-django/project1/project1/template/miPlantilla.html")
 
     plt=Template(doc_externo.read())
-    doc_externo.close() # redendizar
-    ctx=Context({'nombre': p1.nombre, 'apellido' : p1.apellido, 'fecha_actual' : fecha}) # contexto que puede recibir diccionarios
-    documento=plt.render(ctx)
+    doc_externo.close() 
+    ctx=Context({'nombre': p1.nombre, 'apellido' : p1.apellido, 'fecha_actual' : fecha, 'temas' : lista_temas}) # contexto que puede recibir diccionarios
+    documento=plt.render(ctx) # rederizar
 
     return HttpResponse(documento)
 
