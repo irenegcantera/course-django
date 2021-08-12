@@ -36,7 +36,7 @@ def saludo(request): # primera vista, devuelve una respuesta
 def despedida(request): # segunda vista
     return HttpResponse("Hasta luego, alumnos de Django!")
 
-def dameFecha(request): # tercera vista
+def dame_fecha(request): # tercera vista
     fecha_actual=datetime.datetime.now()
     documento="""<html>
     <body>
@@ -47,10 +47,10 @@ def dameFecha(request): # tercera vista
     </html>""" % fecha_actual # marcador de posición
     return HttpResponse(documento)
 
-def calcularEdad(request, edadActual, year): # cuarta vista
+def calcular_edad(request, edad_actual, year): # cuarta vista
     periodo=year-2021
-    edadFutura= edadActual+periodo
-    documento="<html><body><h3>En el año %s tendrás %s años</h3></body></html>" %(year,edadFutura)
+    edad_futura= edad_actual+periodo
+    documento="<html><body><h3>En el año %s tendrás %s años</h3></body></html>" %(year,edad_futura)
     return HttpResponse(documento)
 
 
