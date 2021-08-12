@@ -1,6 +1,8 @@
 from django.http import HttpResponse
 import datetime
 from django.template import Template, Context
+from django.template import loader
+#from django.template.loader import get_template
 
 class Persona(object):
     def __init__(self, nombre, apellido):
@@ -17,12 +19,15 @@ def saludo(request): # primera vista, devuelve una respuesta
 
     lista_temas=['Plantillas','Modelos','Formularios','Vistas','Despliegue']
     
-    doc_externo=open("C:/Users/irene/Documents/GitHub Projects/projects-django/project1/project1/template/miPlantilla.html")
+    #doc_externo=open("C:/Users/irene/Documents/GitHub Projects/projects-django/project1/project1/templates/miPlantilla.html")
+    #plt=Template(doc_externo.read())
+    #doc_externo.close() 
 
-    plt=Template(doc_externo.read())
-    doc_externo.close() 
-    ctx=Context({'nombre': p1.nombre, 'apellido' : p1.apellido, 'fecha_actual' : fecha, 'temas' : lista_temas}) # contexto que puede recibir diccionarios
-    documento=plt.render(ctx) # rederizar
+    doc_externo=loader.get_template('miPlantilla.html')
+
+    #ctx=Context({'nombre': p1.nombre, 'apellido' : p1.apellido, 'fecha_actual' : fecha, 'temas' : lista_temas}) # contexto que puede recibir diccionarios
+    #documento=plt.render(ctx) # renderizar
+    documento=doc_externo.render({'nombre': p1.nombre, 'apellido' : p1.apellido, 'fecha_actual' : fecha, 'temas' : lista_temas}) 
 
     return HttpResponse(documento)
 
