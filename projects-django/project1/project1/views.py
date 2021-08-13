@@ -33,6 +33,13 @@ def saludo(request): # primera vista, devuelve una respuesta
     # request, nombre de la plantilla, contexto
     return render(request,'miPlantilla.html',{'nombre': p1.nombre, 'apellido' : p1.apellido, 'fecha_actual' : fecha, 'temas' : lista_temas})
 
+def curso_django(request):
+
+    fecha=datetime.datetime.now()
+    return render(request, 'curso_django.html', {'dame_fecha' : fecha})
+
+
+
 def despedida(request): # segunda vista
     return HttpResponse("Hasta luego, alumnos de Django!")
 
