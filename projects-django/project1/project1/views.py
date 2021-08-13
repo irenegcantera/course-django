@@ -38,8 +38,6 @@ def curso_django(request):
     fecha=datetime.datetime.now()
     return render(request, 'curso_django.html', {'dame_fecha' : fecha})
 
-
-
 def despedida(request): # segunda vista
     return HttpResponse("Hasta luego, alumnos de Django!")
 
