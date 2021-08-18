@@ -7,8 +7,11 @@ class Clientes(models.Model):
     # campo y tipo de campo, propiedades
     nombre = models.CharField(max_length=30)
     direccion = models.CharField(max_length=50)
-    email = models.EmailField(blank=True, null=True)
+    email = models.EmailField(blank=True, null=True, verbose_name="Correo electrónico")
     telefono = models.CharField(max_length=7)
+
+    def __str__(self):
+        return self.nombre
 
 class Articulos(models.Model):
     nombre = models.CharField(max_length=30)
