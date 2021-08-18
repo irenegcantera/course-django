@@ -7,13 +7,17 @@ class Clientes(models.Model):
     # campo y tipo de campo, propiedades
     nombre = models.CharField(max_length=30)
     direccion = models.CharField(max_length=50)
-    email = models.EmailField()
+    email = models.EmailField(blank=True, null=True)
     telefono = models.CharField(max_length=7)
 
 class Articulos(models.Model):
     nombre = models.CharField(max_length=30)
     seccion = models.CharField(max_length=20)
     precio = models.IntegerField()
+
+    # hay que volver a hacer migraciones siempre que modifiquemos los modelos
+    def __str__(self):
+        return 'El nombre es %s la sección de %s y el precios es %s' % (self.nombre, self.seccion, self.precio)
 
 class Pedidos(models.Model):
     numero = models.IntegerField()
