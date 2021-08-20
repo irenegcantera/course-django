@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('busqueda_producto/', views.buscar_producto),
     path('buscar/', views.buscar),
+    path('contactar/', views.contacto),
 ]
