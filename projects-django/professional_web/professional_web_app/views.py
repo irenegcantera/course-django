@@ -1,12 +1,18 @@
 from django.shortcuts import render, HttpResponse
 
 # Create your views here.
-# home: about me and summery about my experience
-# trayectoria profesional: mapa experiencia
-# noticias
-# contacto
 
 def home(request):
-    return HttpResponse
+    return HttpResponse("Home") # lo que muestra
 
-def 
+def career(request):
+    return HttpResponse("Carrer")
+
+def portfolio(request):
+    return HttpResponse("Portfolio")
+
+def news(request):
+    return HttpResponse("News")
+
+def contact(request):
+    return HttpResponse("Contact")
