@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'professional_web_app',
+    'contact_app',
 ]
 
 MIDDLEWARE = [
