@@ -8,6 +8,9 @@ def home(request):
 def career(request):
     return render(request,"professional_web_app/career.html")
 
+def service(request):
+    return render(request,"professional_web_app/service.html")
+
 def portfolio(request):
     return render(request,"professional_web_app/portfolio.html")
 

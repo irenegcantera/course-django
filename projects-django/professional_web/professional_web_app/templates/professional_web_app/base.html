@@ -37,14 +37,15 @@
   include_js: false
   -->
 
-  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <div class="cover-container d-flex w-50 h-100 p-3 mx-auto flex-column">
     <!-- Heading -->
     <header class="mb-auto">
       <div>
-        <h3 class="float-md-start mb-0">Cover</h3>
+        <h3 class="text-md-start mb-6">Irene González Cantera</h3>
         <nav class="nav nav-masthead justify-content-center float-md-end">
           <a class="nav-link {% if request.path == '/' %}active{% endif %}" aria-current="page" href="{% url 'Home' %}">Home</a>
           <a class="nav-link {% if request.path == '/career/' %} active {% endif %}" href="{% url 'Career' %}">Career</a>
+          <a class="nav-link {% if request.path == '/services/' %} active {% endif %}" href="{% url 'Services' %}">Services</a>
           <a class="nav-link {% if request.path == '/portfolio/' %} active {% endif %}" href="{% url 'Portfolio' %}">Portfolio</a>
           <a class="nav-link {% if request.path == '/news/' %} active {% endif %}" href="{% url 'News' %}">News</a>
           <a class="nav-link {% if request.path == '/contact/' %} active {% endif %}" href="{% url 'Contact' %}">Contact</a>
