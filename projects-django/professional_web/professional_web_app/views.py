@@ -1,4 +1,5 @@
 from django.shortcuts import render, HttpResponse
+from servicesapp.models import Service
 
 # Create your views here.
 
@@ -9,7 +10,8 @@ def career(request):
     return render(request,"professional_web_app/career.html")
 
 def service(request):
-    return render(request,"professional_web_app/service.html")
+    services=Service.objects.all()
+    return render(request, "professional_web_app/service.html", {"services": services})
 
 def portfolio(request):
     return render(request,"professional_web_app/portfolio.html")

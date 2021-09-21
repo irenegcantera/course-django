@@ -3,11 +3,17 @@
 {% load static %}
 
 {% block content %}
+
 <!-- Contenido -->
 <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
     <main class="px-3">
         <h1>Services</h1>
-        <p class="lead">Page NOT available.</p>
+        {% for service in services %}
+        <h4 style="color:white;">{{service.title}}</h4>
+        <p style="color:white;">{{service.content}}</p>
+        <p><img src="{{service.image.url}}"></p>
+        {% endfor %}
     </main>
 </div>
+
 {% endblock %}
