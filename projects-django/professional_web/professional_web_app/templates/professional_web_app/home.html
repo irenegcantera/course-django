@@ -5,14 +5,22 @@
 {% block content %}
 <!-- Contenido -->
 <div><p></p></div>
-<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-  <main class="px-3">
-    <h1>Cover your page.</h1>
-    <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the
-      text, and add your own fullscreen background photo to make it your own.</p>
-    <p class="lead">
-      <a href="{% url 'Career' %}" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Learn more</a>
-    </p>
-  </main>
-</div>
+<section class="page-section clearfix">
+  <div class="container">
+    <div class="intro">
+      <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'professional_web_app/images/principal.jpg' %}" alt="">
+      <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+        <h1 class="section-heading mb-4">
+          <span class="section-heading-upper">Cover your page.</span>
+          <span class="section-heading-lower">More information.</span>
+        </h1>
+        <p class="mb-3">Cover is a one-page template for building simple and beautiful home pages. Download, edit the
+          text, and add your own fullscreen background photo to make it your own.</p>
+        <p class="mb-3">
+          <a href="{% url 'Career' %}" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Learn more</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 {% endblock %}

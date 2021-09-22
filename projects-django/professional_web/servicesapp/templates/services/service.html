@@ -4,16 +4,22 @@
 
 {% block content %}
 
-<!-- Contenido -->
-<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-    <main class="px-3">
         <h1>Services</h1>
         {% for service in services %}
-        <h4 style="color:white;">{{service.title}}</h4>
-        <p style="color:white;">{{service.content}}</p>
-        <p><img src="{{service.image.url}}"></p>
+        <div><p></p></div>
+        <section class="page-section clearfix">
+        <div class="container">
+            <div class="intro">
+            <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{service.image.url}}" alt="" style="width: 50%">
+            <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+                <h1 class="section-heading mb-4">
+                <span class="section-heading-lower" style="color: teal;">{{service.title}}</span>
+                <span class="section-heading-upper">{{service.content}}</span>
+                </h1>
+            </div>
+            </div>
+        </div>
+        </section>
         {% endfor %}
-    </main>
-</div>
 
 {% endblock %}
