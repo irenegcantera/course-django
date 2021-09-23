@@ -21,5 +21,6 @@ from professional_web_app import urls, views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('services/', include('servicesapp.urls')),
+    path('news/', include('newsapp.urls')),
     path('', include('professional_web_app.urls')),
 ]

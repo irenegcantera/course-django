@@ -12,8 +12,5 @@ def career(request):
 def portfolio(request):
     return render(request,"professional_web_app/portfolio.html")
 
-def news(request):
-    return render(request,"professional_web_app/news.html")
-
 def contact(request):
     return render(request,"professional_web_app/contact.html")
