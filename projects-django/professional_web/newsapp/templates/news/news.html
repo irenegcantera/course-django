@@ -23,11 +23,11 @@
         </div>
     {% endfor %}
     <section class="container">
-        <div style="width: 75%; margin: auto; text-align: center; color: gray">
+        <div style="width: 75%; margin: auto; text-align: center; color: whitesmoke">
         Categorias: 
         {% for post in posts %}
             {% for category in post.categories.all %}
-                {{category.name}} &nbsp;&nbsp;&nbsp;
+                <a class=".linksCategories" href="{% url 'Category' category.id %}">{{category.name}}</a> &nbsp;&nbsp;&nbsp;
             {% endfor %}
         {% endfor %}        
         </div>

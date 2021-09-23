@@ -48,7 +48,7 @@
           <a class="nav-link {% if request.path == '/career/' %} active {% endif %}" href="{% url 'Career' %}">Career</a>
           <a class="nav-link {% if request.path == '/services/' %} active {% endif %}" href="{% url 'Services' %}">Services</a>
           <a class="nav-link {% if request.path == '/portfolio/' %} active {% endif %}" href="{% url 'Portfolio' %}">Portfolio</a>
-          <a class="nav-link {% if request.path == '/news/' %} active {% endif %}" href="{% url 'News' %}">News</a>
+          <a class="nav-link {% if request.path|slice:':6' == '/news/' %} active {% endif %}" href="{% url 'News' %}">News</a>
           <a class="nav-link {% if request.path == '/contact/' %} active {% endif %}" href="{% url 'Contact' %}">Contact</a>
         </nav>
       </div>
