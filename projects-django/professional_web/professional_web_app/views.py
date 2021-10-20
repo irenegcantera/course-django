@@ -11,6 +11,3 @@ def career(request):
 
 def portfolio(request):
     return render(request,"professional_web_app/portfolio.html")
-
-def contact(request):
-    return render(request,"professional_web_app/contact.html")

@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'professional_web_app',
     'servicesapp',
     'newsapp',
+    'contactoapp',
 ]
 
 MIDDLEWARE = [
