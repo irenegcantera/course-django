@@ -7,8 +7,15 @@
 <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
     <main class="px-3">
         <h1>Contact</h1>
-        <p class="lead">Page NOT available.</p>
-        <p>{{form}}</p>
+        <p class="lead">Form</p>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <table style ="margin: 20px auto;  text-align: left;">
+                {{form.as_table}}
+            </table>
+            <input type="submit" value="SUBMIT" style ="text-align: center; width:150px;">
+        </form>
+        
     </main>
 </div>
 {% endblock %}
