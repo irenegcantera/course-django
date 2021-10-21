@@ -8,6 +8,11 @@
     <main class="px-3">
         <h1>Contact</h1>
         <p class="lead">Form</p>
+
+        {% if "valid" in request.GET %}
+            <p style = "color: whitesmoke">Mensaje correctamente enviado.</p>
+        {% endif %}
+
         <form action="" method="POST">
             {% csrf_token %}
             <table style ="margin: 20px auto;  text-align: left;">
